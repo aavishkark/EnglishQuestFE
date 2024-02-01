@@ -3,7 +3,7 @@ import axios from 'axios';
 const ViewAll = () => {
     const [books,setbooks]=useState([])
     useEffect(()=>{
-        axios.get(`https://lovely-ox-twill.cyclic.app/books/allbooks`)
+        axios.get(`https://frail-crab-capris.cyclic.app/books/allbooks`)
         .then((res)=>{
           setbooks(res.data.Books)
         })

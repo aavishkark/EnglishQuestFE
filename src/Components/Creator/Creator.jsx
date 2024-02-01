@@ -17,7 +17,7 @@ const Creator = () => {
   const [singlecreatedat,setsinglecreatedat]=useState("")
   const [sort,setsort]=useState("asc")
   useEffect(()=>{
-  axios.get(`https://lovely-ox-twill.cyclic.app/books/allbooks`)
+  axios.get(`https://frail-crab-capris.cyclic.app/books/allbooks`)
   .then((res)=>{
     setbooks(res.data.Books)
   })
@@ -27,7 +27,7 @@ const Creator = () => {
   },[])
     const handleAddBook=(e)=>{
         e.preventDefault()
-         axios.post(`https://lovely-ox-twill.cyclic.app/books/addbook`,
+         axios.post(`https://frail-crab-capris.cyclic.app/books/addbook`,
          {name:name,
           author:author,
           category:category,
@@ -54,7 +54,7 @@ const Creator = () => {
     }
     const handleUpdateBook=(e)=>{
         e.preventDefault()
-        axios.patch(`https://lovely-ox-twill.cyclic.app/books/updatebook/${singlebookid}`,
+        axios.patch(`https://frail-crab-capris.cyclic.app/books/updatebook/${singlebookid}`,
         {
             name:singlebookname,
             author:singlebookauthor,
@@ -72,7 +72,7 @@ const Creator = () => {
         })
     }
     const deleteBook=(e)=>{
-        axios.delete(`https://lovely-ox-twill.cyclic.app/books/deletebook/${e._id}`)
+        axios.delete(`https://frail-crab-capris.cyclic.app/books/deletebook/${e._id}`)
         .then((res)=>{
             console.log(res)
         })

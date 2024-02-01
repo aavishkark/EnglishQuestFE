@@ -10,7 +10,7 @@ const SignUp = () => {
     const nav=useNavigate()
    const handleSubmit=(e)=>{
     e.preventDefault()
-    axios.post(`https://lovely-ox-twill.cyclic.app/users/signup`,
+    axios.post(`https://frail-crab-capris.cyclic.app/users/signup`,
     {username:name,
     email:email,
     password:pass,
